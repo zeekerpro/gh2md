@@ -1,0 +1,8 @@
+skip_patterns:
+  - "*.tmp"
+  - "*.bak"
+  - "temp*"
+  - ".git"
+  - ".github"
+  - "*.lock"
+

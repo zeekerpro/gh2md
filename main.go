@@ -74,7 +74,7 @@ func cloneRepository(repoURL string, localRepoPath string) error {
 	// print a log message
 	fmt.Println("Cloning repository: ", repoURL)
 
-	cmd := exec.Command("git", "clone", "--mirror", "--depth", "1", repoURL, localRepoPath)
+	cmd := exec.Command("git", "clone", "--depth", "1", repoURL, localRepoPath)
 	output, err := cmd.CombinedOutput()
 	if err != nil {
 		return fmt.Errorf("failed to clone repository: %s", output)
@@ -146,7 +146,13 @@ func traverseFiles(repoPath, outputsDir string) error {
 
 func appendToFile(outputFile, content string) error {
 
-	file, err := os.OpenFile(outputFile, os.O_APPEND|os.O_WRONLY, 0644)
+	// 确保输出文件的父目录存在
+	dir := filepath.Dir(outputFile)
+	if err := os.MkdirAll(dir, 0755); err != nil {
+		return err
+	}
+
+	file, err := os.OpenFile(outputFile, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		return err
 	}

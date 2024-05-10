@@ -1,4 +1,4 @@
-# 忽略编译产物
+1# 忽略编译产物
 *.exe
 *.so
 
@@ -20,7 +20,7 @@ work/
 
 repos/
 
-outpus/
+outputs/
 
 # 忽略由 IDE 或编辑器生成的配置文件
 .vscode/
@@ -54,10 +54,6 @@ yarn.lock
 # 忽略依赖包管理器生成的文件
 node_modules/
 vendor/
-
-# 忽略配置文件
-config.json
-config.yml
 
 # 忽略数据库文件
 *.db
