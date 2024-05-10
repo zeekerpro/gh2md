@@ -1,0 +1,131 @@
+# 忽略编译产物
+*.exe
+*.so
+
+# 忽略 Go 编译器生成的文件
+_obj/
+_test/
+_testmain/
+*.test
+
+# 忽略 Go 模块缓存
+go.mod.cache
+pinned.go.mod
+
+# 忽略 Go 工具链产生的文件
+.terraform/
+
+# 忽略 Go 语言工作区
+work/
+
+repos/
+
+outpus/
+
+# 忽略由 IDE 或编辑器生成的配置文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+
+# 忽略操作系统生成的文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+global.json
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+yarn.lock
+
+# 忽略项目中的日志文件
+*.log
+*.log.*
+
+# 忽略依赖包管理器生成的文件
+node_modules/
+vendor/
+
+# 忽略配置文件
+config.json
+config.yml
+
+# 忽略数据库文件
+*.db
+*.sqlite
+
+# 忽略小型二进制文件
+*.pb.bin
+
+# 忽略测试文件
+*_test.go
+testdata/
+
+# 忽略本地编译器插件和扩展文件
+*.swp
+~*
+
+# 忽略小型的临时文件
+*.tmp
+
+# 忽略备份和存档文件
+*.bak
+*.tmp
+*.bak2
+*.swp
+*.bak~
+*.save
+*.rpt
+*.rpog
+*.bak1
+*.orig
+*.o
+*.a
+*.pyc
+__pycache__
+
+# 忽略 Docker 镜像和容器文件
+*.Dockerfile
+*.dockerignore
+docker-compose.yml
+docker-compose-dev.yml
+Dockerfile*
+docker-compose*
+build/
+dist/
+bin/
+
+# 忽略项目依赖
+Gopkg.lock
+Gopkg.toml
+
+# 忽略编译生成的静态资源文件
+public/bundle.js
+public/bundle.js.map
+public/main.*.css
+public/main.*.css.map
+
+# 忽略编辑器文件
+*.sublime-*
+*.tmproj
+*.pt
+
+# 忽略配置文件
+.env.local
+.env.*.local
+.env.local.
+
+# 忽略项目中的证书文件
+*.pem
+*.csr
+*.key
+*.keychain
