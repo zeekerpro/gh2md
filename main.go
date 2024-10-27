@@ -35,14 +35,14 @@ func main() {
 	localRepoPath := filepath.Join(reposLocalDir, repoName)
 
 	// clone
-	err := cloneRepository(repoURL, localRepoPath)
-	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
-	}
+	// err := cloneRepository(repoURL, localRepoPath)
+	// if err != nil {
+	// 	fmt.Println(err)
+	// 	os.Exit(1)
+	// }
 
 	// Traverse the cloned repository files and generate the markdown
-	err = traverseFiles(localRepoPath, mdOutputDir)
+	err := traverseFiles(localRepoPath, mdOutputDir)
 	if err != nil {
 		fmt.Println("Error traversing files:", err)
 		os.Exit(1)
